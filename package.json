@@ -5,9 +5,9 @@
   "license": "ISC",
   "author": "",
   "type": "module",
-  "main": "index.js",
+  "main": "bin/www.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node bin/www.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
