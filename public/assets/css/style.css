@@ -1,0 +1,1269 @@
+/** ***************************************
+/** ***************************************
+
+	TABLE OF CONTENTS
+	---------------------------
+	 1. Typography
+	 	- font-family: ;
+	 	- font-size: ;
+	 	- font-weight: ;
+	 	- letter-spacing: ;
+	 	- line-height: ;
+	 	- text-align: ;
+	 	- text-transform: ;
+	 2. Colors
+	 	- color: ;
+	 	- background-color: ;
+	 	- background: ;
+	 	- border: ;
+	 3. Loader
+	 4. Overlay & Background
+	 5. Content
+	 	- Vertical Align
+	 	- Main Section
+	 		- Logo
+	 		- Main Header
+	 		- Counter
+	 		- Social Icons
+	 		- Switching Sections Buttons
+	 	- Subscribe Section
+ 		- About Section
+	 6. Media Queries
+	 	- Tablets
+	 	- Mobiles
+
+ **  ***************************************/
+
+/******************************************************************
+*******************************		1. TYPOGRAPHY
+******************************************************************/
+
+/**************************************
+		font-family: ;
+	*************************************/
+
+body,
+html {
+	font-family: 'Open Sans', sans-serif;
+	overflow: hidden;
+}
+
+/**************************************
+		font-size: ;
+	*************************************/
+
+.main-heading {
+	font-size: 62px;
+	font-weight: 800;
+	background: radial-gradient(black, transparent);
+	border-radius: 20px;
+	border: 2px solid white;
+	padding: 15px;
+}
+
+.main-paragraph {
+	font-size: 60px;
+}
+
+.count-unit {
+	font-size: 11px;
+}
+
+.social {
+	font-size: 18px;
+}
+
+.switch-button-1,
+.switch-button-2,
+.switch-button-3 {
+	font-size: 28px;
+}
+
+.subscribe p {
+	font-size: 10px;
+}
+
+.font-size-30 {
+	font-size: 30px;
+}
+
+.font-size-40 {
+	font-size: 40px;
+}
+
+.font-size-50 {
+	font-size: 50px;
+}
+
+/**************************************
+		font-weight: ;
+	*************************************/
+.main-paragraph {
+	font-weight: 400;
+}
+
+/**************************************
+		letter-spacing: ;
+	*************************************/
+
+/**************************************
+		line-height: ;
+	*************************************/
+
+body,
+html {
+	line-height: 20px;
+}
+
+/**************************************
+		text-align: ;
+	*************************************/
+
+body,
+html {
+	text-align: center;
+}
+
+.subscribe p {
+	text-align: justify;
+}
+
+/**************************************
+		text-transform: ;
+	*************************************/
+body,
+html {
+	text-transform: uppercase;
+}
+
+/******************************************************************
+*******************************		2. COLORS
+******************************************************************/
+
+/**************************************
+		color: ;
+	*************************************/
+
+body,
+html {
+	color: #FFF;
+}
+
+.color-1 {
+	color: #218eff;
+}
+
+.color-2 {
+	color: #848080;
+}
+
+.color-3 {
+	color: #FFF;
+}
+
+.subscribe-btn-color-active h5 {
+	color: #218eff;
+}
+
+/**************************************
+		background-color: ;
+	*************************************/
+
+.switch-button-1,
+.switch-button-2,
+.switch-button-3 {
+	background-color: transparent;
+}
+
+/**************************************
+		background: ;
+	*************************************/
+
+#loader-wrap {
+	background-color: #1b1b1b;
+}
+
+/**************************************
+		border: ;
+	*************************************/
+
+.subscribe-email-label::before,
+.subscribe-email-label::after {
+	border: 1px solid #218eff;
+}
+
+.subscribe-btn::after,
+.subscribe-btn::before {
+	border: 1px solid white;
+}
+
+/******************************************************************
+*******************************		3. LOADER
+******************************************************************/
+#loader-wrap {
+	display: table;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 44;
+	transition: 1s;
+}
+
+#loader-inner img {
+	position: relative;
+	width: 100px;
+	height: auto;
+}
+
+.load-progress {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	position: relative;
+	display: inline-block;
+	top: -10px;
+	border: 1px solid white;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(#FFF, #FFF), linear-gradient(to right, #FFF, #FFF), linear-gradient(to bottom, #FFF, #FFF), linear-gradient(to left, #FFF, #FFF);
+	background-size: 3px 150%, 150% 3px, 3px 150%, 150% 3px;
+	background-position: left top, left bottom, right bottom, right top, 1px 1px;
+	animation: progress 2s linear infinite;
+}
+
+@keyframes progress {
+	0% {
+		transform: rotate(0deg)
+	}
+
+	100% {
+		transform: rotate(720deg)
+	}
+}
+
+/******************************************************************
+*******************************		4. OVERLAY & BACKGROUND
+******************************************************************/
+#background-effect {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -3;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.overlay {
+	position: absolute;
+	width: 120%;
+	height: 120%;
+	background: url(../img/pattern.png);
+	opacity: 0.3;
+	z-index: -1;
+}
+
+/******************************************************************
+*******************************		5. CONTENT
+******************************************************************/
+
+/**************************************
+		VERTICAL ALIGN	
+	**************************************/
+
+.wrapper {
+	height: 100vh;
+	width: 100vw;
+	margin: 0 auto;
+}
+
+.wrapper,
+.switch-button-1,
+.switch-button-2,
+.switch-button-3,
+.subscribe-btn,
+#counter {
+	display: table;
+	z-index: 0;
+}
+
+
+.vcenter {
+	vertical-align: middle;
+	display: table-cell;
+}
+
+#counter,
+.countdown {
+	margin: 0 auto;
+}
+
+
+
+/**************************************
+		MAIN SECTION
+	**************************************/
+
+#main-section {
+	position: absolute;
+}
+
+#main-section .container {
+	max-width: 500px;
+}
+
+.countdown-wrap {
+	opacity: 0;
+	float: left;
+	margin: 10px 20px;
+	transition: 1s;
+}
+
+.countdown-wrap-active {
+	opacity: 1;
+	transition: 1s;
+}
+
+.countdown {
+	display: block;
+	line-height: initial;
+}
+
+.icon-center i {
+	padding: 5px 0;
+}
+
+/**	LOGO			
+			**************************************/
+.logo {
+	position: relative;
+	top: -50px;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.logo-active {
+	top: 0;
+	opacity: 1;
+	transition: 0.5s;
+}
+
+.logo img {
+	width: 300px;
+	padding: 10px;
+	height: auto;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 4px 0px #c1c1c1;
+	border-radius: 10px;
+}
+
+/**	MAIN HEADER		
+			**************************************/
+.main-paragraph {
+	position: relative;
+	line-height: 70px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	transition: 1s;
+	top: -200px;
+	opacity: 0;
+}
+
+.main-paragraph-active {
+	top: 0;
+	transition: 1s;
+	opacity: 1;
+}
+
+.main-subparagraph {
+	position: relative;
+	margin: 0 auto;
+	top: -100px;
+	opacity: 0;
+	transition: 1s;
+}
+
+.main-subparagraph-active {
+	top: -20px;
+	opacity: 1;
+	transition: 1s;
+}
+
+/**	COUNTER			
+			**************************************/
+#counter {
+	position: relative;
+	box-sizing: content-box;
+}
+
+#counter::after,
+#counter::before {
+	content: '';
+	position: absolute;
+	top: 1px;
+	width: 50%;
+	height: 98%;
+	z-index: 1;
+	left: 0;
+	border: 1px solid white;
+	opacity: 0;
+}
+
+#counter::after {
+	left: 50%;
+	border-left: none;
+	transform: translateX(10em);
+}
+
+#counter.loaded::after {
+	transform: translateX(1em);
+	transition: 0.5s;
+	opacity: 1;
+}
+
+#counter::before {
+	border-right: none;
+	transform: translateX(-10em);
+}
+
+#counter.loaded::before {
+	transform: translateX(-1em);
+	transition: 0.5s;
+	opacity: 1;
+}
+
+@keyframes counterA {
+	0% {}
+
+	100% {
+		width: 0%;
+	}
+}
+
+@keyframes counterB {
+	0% {}
+
+	100% {
+		background-size: 25% 1px, 25% 1px, 25% 1px, 25% 1px;
+	}
+}
+
+
+/**	SOCIAL ICONS	
+			**************************************/
+.social {
+	position: relative;
+	top: 60px;
+	opacity: 0;
+	transition: 1s;
+}
+
+.social-active {
+	opacity: 1;
+	transition: 1s;
+}
+
+.soc-wrap i {
+	color: #fff;
+}
+
+.icon-center {
+	padding: 15px 0;
+}
+
+.soc-wrap {
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	width: 30px;
+	margin: 5px 20px;
+}
+
+.soc-wrap {
+	position: relative;
+}
+
+.soc-wrap::after,
+.soc-wrap::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	border: 1px solid #ffffff;
+	opacity: 0;
+	transition: 0.2s;
+}
+
+.soc-wrap::after {
+	left: 50%;
+	border-left: none;
+	transform: translateX(60%);
+}
+
+.soc-wrap::before {
+	border-right: none;
+	transform: translateX(-60%);
+
+}
+
+.soc-wrap.soc-wrap-hover::after {
+	opacity: 1;
+	transform: translateX(20%);
+	transition: 0.2s;
+}
+
+.soc-wrap.soc-wrap-hover::before {
+	opacity: 1;
+	transform: translateX(-20%);
+	transition: 0.2s;
+}
+
+/** SWITCHING SECTIONS BUTTONS		
+			**************************************/
+
+.switch-button-1 i,
+.switch-button-2 i,
+.switch-button-3 i {
+	position: relative;
+	transition: 0.2s;
+	top: 0;
+	outline: none;
+	text-decoration: none;
+}
+
+.switch-button-1 a,
+.switch-button-2 a,
+.switch-button-3 a {
+	outline: none;
+	text-decoration: none;
+}
+
+.switch-button-1 .vcenter {
+	transform: rotate(-90deg);
+}
+
+.switch-button-1:hover i {
+	animation: switch 0.3s linear;
+	color: #218eff;
+}
+
+@keyframes switch {
+	0% {
+		opacity: 1;
+		top: 0;
+	}
+
+	50% {
+		opacity: 0;
+		top: 20px;
+	}
+
+	70% {
+		opacity: 0;
+		top: -30px;
+	}
+
+	100% {
+		opacity: 1;
+		top: 0px;
+	}
+}
+
+.switch-button-1 {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+	cursor: pointer;
+	transition: 0.5s;
+	margin-top: 0px;
+	transform: rotate(90deg);
+	top: 50px;
+	opacity: 0;
+	transition: 1s;
+}
+
+.switch-button-1-active {
+	top: 0px;
+	opacity: 1;
+	transition: 1s;
+}
+
+.switch-button-1::after,
+.switch-button-1::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	border: 2px solid white;
+	transition: 0.3s;
+}
+
+.switch-button-1::after {
+	left: 50%;
+	border-left: none;
+}
+
+.switch-button-1::before {
+	border-right: none;
+}
+
+.switch-button-1:hover::after,
+.switch-button-1:hover::before {
+	border: 2px solid white;
+}
+
+.switch-button-1:hover::after {
+	transform: translateX(5px);
+	border-left: none;
+
+}
+
+.switch-button-1:hover::before {
+	transform: translateX(-5px);
+	border-right: none;
+}
+
+.switch-button-2 {
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+	cursor: pointer;
+	transition: 0.5s;
+	margin-top: 0px;
+	border: 1px solid #848080;
+	z-index: 3;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.switch-button-3 {
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+	text-align: center;
+	margin: 0 auto;
+	cursor: pointer;
+	transition: 0.5s;
+	border: 1px solid #848080;
+	z-index: 3;
+}
+
+.switch-button-2:hover i,
+.switch-button-3:hover i {
+	color: #a52a2a;
+}
+
+#content-section {
+	display: none;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	padding: 0 !important;
+}
+
+.sub-section {
+	background: rgba(0, 0, 0, 0.7);
+	height: 100vh;
+}
+
+.sub-section .container {
+	max-width: 800px;
+}
+
+/** SUBSCRIBE SECTION		
+	**************************************/
+.sub-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	background-color: rgba(0, 0, 0, 0.7);
+	transition: 0.5s;
+	opacity: 0;
+}
+
+.subscribe p {
+	padding: 0 20px;
+	margin-bottom: 60px;
+}
+
+.sub-overlay-active {
+	opacity: 1;
+	z-index: 1;
+	transition: 0.5s;
+}
+
+#subscribe-wrap {
+	position: absolute;
+}
+
+.subscribe-z {
+	z-index: -1;
+	background-color: rgba(8, 8, 8, 0.3);
+
+}
+
+#subscribe-wrap .container {
+	max-width: 400px;
+}
+
+.subscribe-wrap-active {
+	z-index: 2;
+	transition: 0.5s;
+	background-color: rgba(8, 8, 8, 0.7);
+
+}
+
+.subscribe {
+	display: table-cell;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	width: 400px;
+	height: 450px;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.subscribe-active {
+	opacity: 1;
+	transition: 0.5s;
+}
+
+.subscribe::after,
+.subscribe::before {
+	content: '';
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	border: 2px solid white;
+	transition: 0.5s;
+	top: 0;
+	left: 0;
+}
+
+.subscribe::after {
+	left: 50%;
+	border-left: none;
+	transform: translateX(30%);
+}
+
+.subscribe::before {
+	border-right: none;
+	transform: translateX(-30%);
+}
+
+.subscribe.borders-merge::after {
+	transform: translateX(5%);
+}
+
+.subscribe.borders-merge::before {
+	transform: translateX(-5%);
+}
+
+.subscribe-btn {
+	margin: 0 auto;
+	position: relative;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	width: 200px;
+	height: 50px;
+	top: 100px;
+	opacity: 0;
+	transition: 1s;
+	color: #fff;
+	cursor: pointer;
+}
+
+.subscribe-btn-color-active h5 {
+	transition: 0.2s;
+}
+
+.subscribe-btn-active {
+	top: 0;
+	opacity: 1;
+	transition: 1s;
+}
+
+.subscribe-btn::after,
+.subscribe-btn::before {
+	content: '';
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	transition: 0.2s;
+}
+
+.subscribe-btn::after {
+	left: 50%;
+	border-left: none;
+}
+
+.subscribe-btn::before {
+	border-right: none;
+}
+
+.subscribe-btn.subscribe-btn-hover::after {
+	transform: translateX(10%);
+}
+
+.subscribe-btn.subscribe-btn-hover::before {
+	transform: translateX(-10%);
+}
+
+.subscribe-form {
+	margin: 0 auto;
+	position: relative;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	width: 260px;
+	opacity: 1;
+	transition: 1s;
+	z-index: 1;
+}
+
+.subscribe-email-field {
+	z-index: 1;
+	position: absolute;
+	vertical-align: middle;
+	width: 260px;
+	height: 50px;
+	border-radius: 0;
+	border: none;
+	/* -webkit-appearance: none; */
+	background-color: transparent;
+	text-align: center;
+}
+
+.submit-form-icon {
+	opacity: 0;
+	display: block;
+	border: none;
+	position: absolute;
+	right: 5px;
+	top: 11px;
+	cursor: pointer;
+	z-index: 2;
+	transition: opacity .5s ease-in-out;
+}
+
+.subscribe-email-field:focus {
+	outline: none;
+}
+
+.subscribe-email-field::-ms-clear {
+	display: none;
+}
+
+.subscribe-email-label {
+	z-index: 0;
+	width: 260px;
+	height: 50px;
+	-webkit-font-smoothing: antialiased;
+}
+
+.subscribe-email-span {
+	position: relative;
+	display: inline-block;
+	padding: 17px;
+	opacity: 1;
+	transition: opacity .5s ease-in-out;
+	width: 260px;
+	height: 50px;
+	z-index: 0;
+	transition: 0.5s;
+	top: 0;
+}
+
+.subscribe-email-label::before,
+.subscribe-email-label::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 130px;
+	height: 50px;
+	-webkit-transition: -webkit-transform 0.2s;
+	transition: transform 0.2s;
+	background-color: transparent;
+	opacity: 1;
+}
+
+.subscribe-email-label::before {
+	border-left: none;
+	left: 50%;
+}
+
+.subscribe-email-label::after {
+	border-right: none;
+}
+
+.send-email-span {
+	-webkit-transform: translate3d(0, -30%, 0) scale(0, 0);
+	transform: translate3d(0, -30%, 0) scale(0, 0);
+	position: relative;
+	display: inline-block;
+	padding: 17px;
+	opacity: 0;
+	transition: opacity .5s ease-in-out;
+	z-index: 0;
+	transition: 0.5s;
+	top: 0;
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+.subscribe-email-field:focus+.subscribe-email-label .subscribe-email-span,
+.subscribe-email-field-on-focus .subscribe-email-span {
+	-webkit-transform: translate3d(0, 30%, 0) scale(0, 0);
+	transform: translate3d(0, 30%, 0) scale(0, 0);
+	transition: 0.5s;
+	opacity: 0;
+}
+
+.subscribe-email-field:focus+.subscribe-email-label .send-email-span,
+.subscribe-email-field-on-focus .send-email-span {
+	-webkit-transform: translate3d(0, 0%, 0) scale(1, 1);
+	transform: translate3d(0, 0%, 0) scale(1, 1);
+	transition: 0.5s;
+	opacity: 1;
+}
+
+.subscribe-email-field:focus+.subscribe-email-label::before,
+.subscribe-email-field-on-focus .subscribe-email-label::before {
+	-webkit-transform: translate3d(0.5em, 0, 0);
+	transform: translate3d(0.5em, 0, 0);
+}
+
+.subscribe-email-field:focus+.subscribe-email-label::after,
+.subscribe-email-field-on-focus .subscribe-email-label::after {
+	-webkit-transform: translate3d(-0.5em, 0, 0);
+	transform: translate3d(-0.5em, 0, 0);
+}
+
+.subsnribe-email-field-animation-error:focus+.subscribe-email-label-animation-error::before {
+	border-color: red !important;
+}
+
+.subscribe-email-field-animation-error:focus+.subscribe-email-label-animation-error::after {
+	border-color: red !important;
+}
+
+.subscribe-email-field-animation-error,
+.subscribe-email-label-animation-error,
+.subscribe-email-field-animation-error:after,
+.subscribe-email-label-animation-error:after,
+.subscribe-email-field-animation-error:before,
+.subscribe-email-label-animation-error:before {
+	border-color: red;
+}
+
+/**	ABOUT SECTION		
+	**************************************/
+/* #about-us {} */
+
+.about-head-container {
+	position: relative;
+	top: 0;
+	width: 280px;
+	margin: 0 auto;
+	padding: 10px;
+	margin-bottom: 40px;
+}
+
+.about-head-container::after,
+.about-head-container::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	border: 1px solid #ffffff;
+	transition: 0.5s;
+	opacity: 0;
+}
+
+.about-head-container::after {
+	left: 50%;
+	border-left: none;
+	transform: translateX(50px);
+}
+
+.about-head-container::before {
+	border-right: none;
+	transform: translateX(-50px);
+}
+
+.about-head-container.about-head-container-active::after {
+	transform: translateX(10px);
+	opacity: 1;
+	transition: 0.5s;
+}
+
+.about-head-container.about-head-container-active::before {
+	transform: translateX(-10px);
+	opacity: 1;
+	transition: 0.5s;
+}
+
+.about-head1 {
+	position: relative;
+	left: -100px;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.about-head2 {
+	position: relative;
+	left: 100px;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.about-head-active {
+	left: 0;
+	opacity: 1;
+	transition: 0.5s;
+}
+
+/* .about-us-paragraph {} */
+
+
+.contact-details {
+	position: relative;
+	top: 30px;
+}
+
+/* #contact-us {} */
+
+.form-group {
+	position: relative;
+	width: 100%;
+	height: 50px;
+}
+
+.form-group::after,
+.form-group::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	transition: 0.3s;
+	border: 1px solid #a52a2a;
+}
+
+.form-group::before {
+
+	border-right: none;
+}
+
+.form-group::after {
+	left: 50%;
+	border-left: none;
+}
+
+.form-group.activeBefore::before {
+	-webkit-transform: translate3d(-0.5em, 0, 0);
+	transform: translate3d(-0.5em, 0, 0);
+}
+
+.form-group.activeBefore::after {
+	-webkit-transform: translate3d(0.5em, 0, 0);
+	transform: translate3d(0.5em, 0, 0);
+}
+
+.form-group input {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	z-index: 1;
+	text-align: center;
+	outline: none;
+	border: none;
+}
+
+.form-textarea {
+	height: 100px;
+}
+
+.form-group textarea {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	z-index: 1;
+	vertical-align: middle;
+	outline: none;
+	border: none;
+}
+
+.contact-name {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 200px;
+	z-index: 2;
+}
+
+.submit-not-ready {
+	color: #a52a2a !important;
+	border-color: #a52a2a !important;
+	background-color: #272727 !important;
+	transition: 0.2s;
+}
+
+.submit-ready {
+	color: lightgreen !important;
+	border-color: lightgreen !important;
+	transition: 0.2s;
+}
+
+/******************************************************************
+*******************************		6. MEDIA QUERIES
+******************************************************************/
+
+/**************************************
+		TABLETS
+	*************************************/
+
+@media only screen and (max-width : 991px) {
+	.main-paragraph {
+		font-size: 62px;
+	}
+
+	.soc-wrap {
+		margin: 5px 5px;
+	}
+
+	.about-head-container {
+		position: relative;
+		top: 15px;
+	}
+}
+
+/**************************************
+		MOBILES
+	*************************************/
+
+
+@media only screen and (max-width: 736px) {
+
+	#main-section .container,
+	#about-us .container {
+		max-width: 100vw;
+		max-height: 100vh;
+		overflow-x: hidden;
+		overflow-y: auto;
+		padding: 50px 0;
+	}
+
+	#subscribe-wrap .container {
+		max-height: 100vh;
+		max-width: 100vw;
+		overflow-x: hidden;
+		overflow-y: auto;
+		padding: 10px 29px;
+	}
+
+	.subscribe {
+		width: auto;
+	}
+
+	.switch-button-2 {
+		background-color: white;
+	}
+
+	.about-us-paragraph {
+		padding: 0 100px;
+	}
+}
+
+@media only screen and (max-width: 414px) {
+	.logo img {
+		width: 100px;
+	}
+
+	.main-paragraph {
+		font-size: 32px;
+	}
+
+	.main-paragraph-active {
+		top: -21px;
+		font-size: 32px;
+		line-height: 1.1;
+	}
+
+	.about-us-paragraph {
+		padding: 0 10px;
+	}
+
+	.countdown-wrap {
+		margin: 5px 5px;
+	}
+
+	.font-size-50 {
+		font-size: 50px;
+	}
+
+	.social {
+		top: 10px;
+	}
+
+	.contact-details {
+		top: 0;
+	}
+
+	.switch-button-2 {
+		background-color: transparent;
+	}
+}
+
+@media only screen and (max-width : 320px) {
+	#about-us .container {
+		top: 50px;
+		position: relative;
+		max-height: 100vh;
+		max-width: 100vw;
+		overflow-x: hidden;
+		overflow-y: auto;
+		padding: 10px 0;
+	}
+
+	.main-paragraph {
+		font-size: 28px;
+	}
+
+	.main-paragraph-active {
+		font-size: 28px;
+	}
+
+	.social {
+		top: -14px;
+	}
+
+	.about-head-container {
+		width: 268px;
+	}
+
+	#subscribe-wrap .container {
+		padding: 10px 10px;
+	}
+}
